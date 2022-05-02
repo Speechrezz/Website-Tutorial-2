@@ -41,7 +41,7 @@ main {
     background-color: var(--bg-primary);
 }
 
-p {
+p, li {
     color: var(--text-secondary);
 }
 
