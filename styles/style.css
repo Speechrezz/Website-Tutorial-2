@@ -54,7 +54,7 @@ footer {
 nav {
     height: 5.25rem;
     position: relative;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     z-index: 100;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(44, 46, 51);
