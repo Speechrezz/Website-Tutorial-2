@@ -3,7 +3,7 @@
     font-family: 'Open Sans', sans-serif;
     --text-primary: #ececec;
     --text-secondary: #b6b6b6;
-    --bg-primary: #23232e;
+    --bg-primary: rgb(26, 27, 30);
     --bg-secondary: #141418;
     --bg-third: hsl(240, 9%, 20%);
 }
@@ -13,7 +13,7 @@ a {
 }
 
 body {
-    background-color: var(--bg-third);
+    background-color: var(--bg-primary);
     color: var(--text-primary); /* Text color */
     margin: 0;
     padding: 0;
@@ -58,30 +58,80 @@ footer {
     margin-top: 1rem;
 }
 
-.navbar {
-    width: auto;
-    margin-left: 15rem;
-    margin-right: 15rem;
-    height: 3rem;
+nav {
+    height: 5.25rem;
     position: relative;
     background-color: var(--bg-secondary);
+    z-index: 100;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(44, 46, 51);
+	margin-bottom: 120px;
 }
 
-.navbar-nav {
-    list-style: none;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+nav .logo {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: var(--text-secondary);
+	text-decoration: none;
+}
+
+nav .nav-area {
+    max-width: 960px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    height: 100%;
 }
 
-.nav-link {
+.nav-area .links {
+	padding-top: 20px;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	justify-content: space-between;
+	box-sizing: border-box;
+}
+
+.links .nav-secondary {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 16px;
+}
+
+.nav-secondary .link {
+	text-decoration: none;
+	color: rgb(144, 146, 150);
+	font-size: 12px;
+	text-transform: uppercase;
+	transition: color 100ms ease 0s;
+}
+
+.nav-secondary .link:hover {
+	color: rgb(255, 255, 255);
+}
+
+.links .nav-primary {
+	display: flex;
+	box-sizing: border-box;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: -12px;
+}
+
+.nav-primary .link {
     transition: all 0.1s ease;
     color: var(--text-secondary);
-    font-size: 1.2rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
@@ -91,11 +141,11 @@ footer {
     border-color: currentcolor currentcolor transparent;
 }
 
-.nav-current {
+.nav-primary .current {
     border-color: currentcolor currentcolor rgb(51, 154, 240);
     color: rgb(255, 255, 255);
 }
-.nav-link:hover {
+.nav-primary .link:hover {
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
