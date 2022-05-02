@@ -93,12 +93,9 @@ footer {
 
 .nav-current {
     border-color: currentcolor currentcolor rgb(51, 154, 240);
+    color: rgb(255, 255, 255);
 }
 .nav-link:hover {
     color: rgb(255, 255, 255);
     text-decoration: none;
-}
-
-.nav-link:focus {
-    border-color: currentcolor currentcolor rgb(51, 154, 240);
 }
